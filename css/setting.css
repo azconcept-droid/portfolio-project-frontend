@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    height: 100vh;
+    background-color: #f8f9fc;
+    color: #333;
+  }
+  
+  .dashboard {
+    display: flex;
+    width: 100%;
+  }
+  
+  .sidebar {
+    width: 250px;
+    background-color: #4a4bc4;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .sidebar .logo {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  .sidebar nav ul {
+    list-style: none;
+  }
+  
+  .sidebar nav ul li {
+    margin: 10px 0;
+  }
+  
+  .sidebar nav ul li a {
+    text-decoration: none;
+    color: #ddd;
+    font-size: 18px;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+  }
+  
+  .sidebar nav ul li a:hover,
+  .sidebar nav ul li a.active {
+    background-color: #3b3ca4;
+    color: white;
+  }
+
+  .sidebar-footer {
+    margin-top: auto;
+  }
+  .sidebar-footer a {
+    text-decoration: none;
+    color: #ddd;
+    font-size: 16px;
+    margin: 10px 0;
+    display: block;
+    padding: 20px;
+  }
+  
+  .settings-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fc;
+  }
+  
+  .settings-card {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+  }
+  
+  .settings-card h2 {
+    font-size: 24px;
+    color: #4a4bc4;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  form label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+    text-align: left;
+  }
+  
+  form input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  form input:focus {
+    border-color: #4a4bc4;
+    box-shadow: 0 0 5px rgba(74, 75, 196, 0.4);
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  button:active {
+    transform: scale(0.98);
+  }
+  
+  .reset-btn {
+    background-color: #4a4bc4;
+    color: white;
+    margin-bottom: 10px;
+  }
+  
+  .reset-btn:hover {
+    background-color: #3b3ca4;
+  }
+  
+  .delete-btn {
+    background-color: #ff4a4a;
+    color: white;
+  }
+  
+  .delete-btn:hover {
+    background-color: #d93636;
+  }
+  
+  @media (max-width: 768px) {
+    .settings-card {
+      width: 90%;
+      padding: 20px;
+    }
+  }
+  

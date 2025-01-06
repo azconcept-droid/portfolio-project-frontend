@@ -1,0 +1,17 @@
+.alert-success {
+  padding: 15px;
+  border: 1px solid #d6e9c6;
+  border-radius: 4px;
+  color: #007bff;
+  background-color: #dff0d8;
+  position: relative;
+}
+
+.alert-failure {
+  padding: 15px;
+  border: 1px solid #d6e9c6;
+  border-radius: 4px;
+  color: #ff3300;
+  background-color: #dff0d8;
+  position: relative;
+}

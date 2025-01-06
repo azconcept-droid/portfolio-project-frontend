@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Account</title>
+  <link rel="stylesheet" href="./css/signup.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <script src="./js/signup.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <a href="javascript:window.history.back()" class="back-button">← Back</a>
+    <div class="form-card">
+      <h2>Connect</h2>
+      <h3>Create account</h3>
+      <p>We would love you to join us from today!</p>
+      <form id="signup-form">
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <input type="password" id="confirm-pass" placeholder="Confirm Password" required>
+        <label>
+          <input type="checkbox" id="agreedToTerms" required>
+          I agree to the Terms and Conditions
+        </label>
+        <button type="submit" class="signup-button">Sign up</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+  }
+
+  body {
+    background-color: #3b82f6;
+    /* background-color: #f3f2ef; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 15px;
+  }
+  span{
+    font-size: large;
+  }
+
+  .container {
+    background-color: #ffffff;
+    width: 420px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 30px 25px;
+  }
+
+  .logo {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .logo img {
+    width: 120px;
+    border-radius: 70px;
+  }
+
+  .heading {
+    font-size: 22px;
+    color: #333333;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .subheading {
+    text-align: center;
+    font-size: medium;
+    color: #666666;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  label {
+    font-size: 13px;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 5px;
+    display: block;
+  }
+
+  input {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    margin-bottom: 10px;
+  }
+
+  input:focus {
+    border-color: #0073b1;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 115, 177, 0.3);
+  }
+
+  .verification {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .verification input {
+    flex: 1;
+    margin-bottom: 0;
+  }
+
+  .get-btn {
+    padding: 12px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #0073b1;
+    background-color: #ffffff;
+    border: 1px solid #0073b1;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .get-btn:hover {
+    background-color: #0073b1;
+    color: #ffffff;
+  }
+
+  .btn {
+    width: 100%;
+    background-color: #0073b1;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+
+  .btn:hover {
+    background-color: #005580;
+  }
+
+  .footer {
+    text-align: center;
+    font-size: medium;
+    color: #666666;
+    margin-top: 20px;
+  }
+
+  .footer a {
+    font-size: medium;
+    color: #0073b1;
+    text-decoration: none;
+  }
+
+  .footer a:hover {
+    text-decoration: underline;
+  }
