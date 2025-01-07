@@ -9,5 +9,4 @@ This is a properties lease, rent and purchase website
 - JS
 
 ## Authors
-- Ijola awwal
 - Yahaya Azeez

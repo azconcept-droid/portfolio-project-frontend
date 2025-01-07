@@ -1,5 +1,5 @@
-// const baseUrl = new URL("http://localhost:4000");
-const baseUrl = new URL("https://portfolio-project-backend-fqo9.onrender.com/api/v1")
+const baseUrl = new URL("http://localhost:4000");
+// const baseUrl = new URL("https://portfolio-project-backend-fqo9.onrender.com/api/v1")
 
 document.getElementById("login-form").addEventListener("submit", async function (event) {
   event.preventDefault(); // Prevent form submission
@@ -29,6 +29,7 @@ document.getElementById("login-form").addEventListener("submit", async function 
 
   if (result.status === "success") {
     alertMessage(result.message, result.status)
+    window.location.href = "../portfolio-project-frontend/dashboard.html";
   } else {
     alertMessage(result.message, result.status)
   }

@@ -1,5 +1,5 @@
-// const baseUrl = new URL("http://localhost:4000");
-const baseUrl = new URL("https://portfolio-project-backend-fqo9.onrender.com/api/v1")
+const baseUrl = new URL("http://localhost:4000");
+// const baseUrl = new URL("https://portfolio-project-backend-fqo9.onrender.com/api/v1")
 
 
 document.getElementById("signup-form").addEventListener("submit", async function (event) {
