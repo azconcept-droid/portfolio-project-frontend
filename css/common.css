@@ -15,3 +15,15 @@
   background-color: #dff0d8;
   position: relative;
 }
+
+#logout-button {
+  color: #ddd;
+  border: none;
+  padding: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#logout-button:hover {
+  background-color: #3b3ca4;
+}

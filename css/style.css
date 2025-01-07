@@ -139,7 +139,7 @@ body {
 
 .verified-tag {
   position: absolute;
-  top: 10px;
+  top: 20px;
   left: 10px;
   background: #28a745;
   color: white;
@@ -148,10 +148,10 @@ body {
   border-radius: 20px;
   font-weight: bold;
 }
-.Available-tag {
+.available-tag {
   position: absolute;
-  top: 10px;
-  left: 550px;
+  top: 20px;
+  left: 400px;
   background:#4a4bc4;
   color: white;
   font-size: 14px;
@@ -215,22 +215,22 @@ body {
   color: gray;
   font-size: 14px;
 }
-.Rented-tag {
+.rented-tag {
   position: absolute;
-  top: 10px;
-  left: 550px;
+  top: 20px;
+  left: 430px;
   background: red;
   color: white;
   font-size: 14px;
-  padding: 7px 12px;
+  padding: 5px 10px;
   border-radius: 20px;
   font-weight: bold;
 }
 .processing-tag {
   position: absolute;
-  top: 10px;
-  left: 500px;
-  background: yellowgreen;
+  top: 20px;
+  left: 400px;
+  background: rgb(224, 224, 31);
   color: white;
   font-size: 14px;
   padding: 7px 12px;
