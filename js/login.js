@@ -33,9 +33,6 @@ document.getElementById("login-form").addEventListener("submit", async function 
   } else {
     alertMessage(result.message, result.status)
   }
-  // const token = window.localStorage.getItem('access_token')
-
-  // window.localStorage.removeItem('access_token')
 });
 
 function alertMessage(message, status) {

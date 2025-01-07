@@ -31,6 +31,7 @@ document.getElementById("signup-form").addEventListener("submit", async function
 
   if (result.status === "success") {
     alertMessage(result.message, result.status)
+    window.location.href = "../portfolio-project-frontend/verificationpage.html";
   } else {
     alertMessage(result.message, result.status)
   }
