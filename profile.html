@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Profile Page</title>
   <link rel="stylesheet" href="./css/profile.css">
+  <script src="./js/logout.js" defer></script>
 </head>
 <body>
   <div class="dashboard">
@@ -12,17 +13,17 @@
       <div class="logo">Logo</div>
       <nav>
         <ul>
-          <li><a href="./dashboard.html">Home</a></li>
-          <li><a href="#" class="active">Profile</a></li>
-          <li><a href="./Nofication.html">Notifications</a></li>
-          <li><a href="#">Bookmarks</a></li>
-          <li><a href="./post.html">Post Property</a></li> 
-          <li><a href="#">Create Blog</a></li>
+          <li><a href="./dashboard.html">🏠  Home</a></li>
+          <li><a href="#" class="active">👤  Profile</a></li>
+          <li><a href="./Nofication.html">💌  Notifications</a></li>
+          <li><a href="./post.html">🏣 Post Property</a></li> 
+          <li><a href="#">My Blogs</a></li>
+          <li><a href="#">📔  Bookmarks</a></li>
         </ul>
       </nav>
       <div class="sidebar-footer">
-        <a href="./seting.html">Settings</a>
-        <a href="#">Logout</a>
+        <a href="./setting.html">⚙️  Settings</a>
+        <a id="logout-button"> logout </a>
       </div>
     </div>
     <div class="profile-container">
@@ -33,13 +34,13 @@
         </div>
 
         <form class="profile-form">
-          <label for="name"> firstName </label>
-          <input type="text" id="name" placeholder="Enter your firstName" />
+          <label for="name"> First name </label>
+          <input type="text" id="firstName" placeholder="Enter your firstName" />
 
-          <label for="email"> lastName</label>
+          <label for="email"> Last name</label>
           <input type="text" id="lastName" placeholder="Enter your lastName" />
 
-          <label for="phone"> Phone Number</label>
+          <label for="phone"> Phone number</label>
           <input type="tel" id="phone" placeholder="Enter your phone number" />
 
           <label for="bio"> Bio</label>
