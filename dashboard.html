@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/common.css">
   <script src="./js/logout.js" defer></script>
-  <script src="./js/login.js" defer></script>
+  <script src="./js/dashboard.js" defer></script>
 </head>
 <body>
   <div class="dashboard">
@@ -19,6 +19,7 @@
           <li><a href="./profile.html">👤  Profile</a></li>
           <li><a href="./Nofication.html">💌  Notifications</a></li>
           <li><a href="#">📔  Bookmarks</a></li>
+          <li><a href="./post.html">Post Property</a></li> 
         </ul>
       </nav>
       <div class="sidebar-footer">
@@ -30,66 +31,15 @@
     <div class="main-content">
       <div class="header">
         <div>
-          <h1>Dashboard</h1>
-          <p>Welcome back, Hawwal</p>
+          <p class="welcome-message"></p>
+          <h1>View recent posts 👇</h1>
         </div>
         <div class="profile-info">
           <img src="./img/R.jpg" alt="avatar">
-          <span>ijoolahawwal@gmail.com</span>
+          <span class="user-email"></span>
         </div>
       </div>
-      <div class="property-list">
-        <div class="property-card">
-          <div class="verified-tag">✔ Verified</div>
-          <div class="available-tag">✔ Available</div>
-          <img src="./img/photo-of-house-3555615 - Copy.jpg" alt="Property">
-          <div class="card-content">
-            <p class="property-type">Property: 3 bedroom flat</p>
-            <p class="price">Price: 2 million naira</p>
-            <p class="postal">Postal: Hamed Agencies</p>
-            <p class="address">Address: 66, Titikokori</p>
-            <button>Watch Video</button>
-            <span class="date">Date: 12/12/24</span>
-          </div>
-        </div>
-        <div class="property-card">
-          <div class="verified-tag">✔ Verified</div>
-          <div class="rented-tag">&times; Rented</div>
-          <img src="./img/OIP (6) - Copy.jpg" alt="Property">
-          <div class="card-content">
-            <p class="property-type">Property: 3 bedroom flat</p>
-            <p class="price">Price: 2 million naira</p>
-            <p class="postal">Postal: Hamed Agencies</p>
-            <p class="address">Address: 66, Titikokori</p>
-            <button>Watch Video</button>
-            <span class="date">Date: 12/12/24</span>
-          </div>
-        </div>
-        <div class="property-card">
-          <div class="verified-tag">✔ Verified</div>
-          <div class="processing-tag"> Proccessing...</div>
-          <img src="./img/OIP (3).jpg" alt="Property">
-          <div class="card-content">
-            <p class="property-type">Property: 3 bedroom flat</p>
-            <p class="price">Price: 2 million naira</p>
-            <p class="postal">Postal: Hamed Agencies</p>
-            <p class="address">Address: 66, Titikokori</p>
-            <button href="#" >Watch Video</button>
-            <span class="date">Date: 12/12/24</span>
-          </div>
-        </div> <div class="property-card">
-          <div class="verified-tag">✔ Verified</div>
-          <img src="./img/OIP (5) - Copy.jpg" alt="Property">
-          <div class="card-content">
-            <p class="property-type">Property: 3 bedroom flat</p>
-            <p class="price">Price: 2 million naira</p>
-            <p class="postal">Postal: Hamed Agencies</p>
-            <p class="address">Address: 66, Titikokori</p>
-            <button>Watch Video</button>
-            <span class="date">Date: 12/12/24</span>
-          </div>
-        </div>
-      </div>
+      <div class="property-list" id="property-list"></div>
     </div>
   </div>
 </body>

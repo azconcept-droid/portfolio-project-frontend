@@ -1,5 +1,5 @@
-const baseUrl = new URL("http://localhost:4000");
-// const baseUrl = new URL("https://portfolio-project-backend-fqo9.onrender.com/api/v1")
+// const baseUrl = new URL("http://localhost:4000");
+const baseUrl = new URL("https://portfolio-project-backend-fqo9.onrender.com/api/v1")
 
 document.getElementById("logout-button").addEventListener("click", async function (event) {
 
@@ -20,8 +20,6 @@ document.getElementById("logout-button").addEventListener("click", async functio
   })
 
   let result = await response.json();
-
-  console.log(result);
 
   if (result.status === "success") {
     alertMessage(result.message, result.status)

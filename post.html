@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/post.css">
+    <link rel="stylesheet" href="./css/common.css">
+
+    <title>Post Property</title>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="sidebar">
+            <div class="logo">Logo</div>
+            <nav>
+                <ul>
+                    <li><a href="./dashboard.html" class="active">Home</a></li>
+                    <li><a href="./profile.html">Profile</a></li>
+                    <li><a href="./Nofication.html" >Notification</a></li>
+                    <li><a href="#">Bookmarks</a></li> 
+                    <li><a href="." class="active">Post Property</a></li> 
+                </ul> 
+            </nav>
+            <div class="sidebar-footer">
+                <a href="./seting.html">Settings</a>   
+                <a href="#">Logout</a>
+            </div>
+        </div>
+        <div class="post-container">
+            <div class="post-card">
+                <form class="post-form">
+                    <div class="post-picture">
+                        <img src="./img/OIP (6) - Copy.jpg" alt="Property picture">
+                        <input type="file" id="upload-picture" class="upload-btn" placeholder="upload property image">
+                    </div>
+                    <label for="name">Property</label>
+                    <input type="text" id="name" placeholder="Enter your Property">
+
+                    <label for="price">Price</label>
+                    <input type="text" id="price" placeholder="Enter your price">
+
+                    <label for="city">City</label>
+                    <input type="text" id="city" placeholder="Enter your city">
+
+                    <label for="state">State</label>
+                    <input type="text" id="state" placeholder="Enter your state">
+
+                    <label for="country">Country</label>
+                    <input type="text" id="country" placeholder="Enter your country">
+
+                    <label for="videoUrl">VideoLink</label>
+                    <input type="text" id="videoUrl" placeholder="Enter your videoUrl">
+                    
+                    <div class="form-buttons">
+                        <button type="submit" class="post-btn">Post property</button>
+                        <button type="button" class="cancel-btn">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
