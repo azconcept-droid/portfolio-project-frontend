@@ -41,10 +41,10 @@ function displayProperties(properties) {
     card.innerHTML = `
       <div class="verified-tag">${property.isVerified ? "✔ Verified" : "Not verified"}</div>
       <div class="${property.status}-tag">${property.status ? "✔ Available" : ""}</div>
-      <img src="${property.postImageUrl}">
+      <img src="./img/OIP (3).jpg">
       <div class="card-content">
         <p class="property-type">Property: ${property.property}</p>
-        <p class="price">Price: ${property.price}</p>
+        <p class="price">Price: &#8358;${property.price}</p>
         <p class="postal">Posted by: ${property.user.firstName} ${property.user.lastName}</p>
         <p class="address">Address: ${property.city}, ${property.state}, ${property.country}</p>
         <button><a href=${property.videoUrl} target="_blank" class="watch_video">Watch Video</a></button>
@@ -71,7 +71,7 @@ async function getPosts() {
     // Call the function to display properties
     console.log(result.data);
     displayProperties(result.data);
-  } else {
+  } else { 
     alertMessage(result.message, result.status);
   }
 }

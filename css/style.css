@@ -130,7 +130,7 @@ body {
   position: relative;
   display: flex;
   flex-direction: column; 
-  min-height: 450px;
+  min-height: 480px;
 }
 
 .property-card:hover {
@@ -213,7 +213,8 @@ body {
   display: block;
   margin-top: 10px;
   color: gray;
-  font-size: 14px;
+  font-size: 17px;
+  margin-bottom: 50px;
 }
 .rented-tag {
   position: absolute;
