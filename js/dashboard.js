@@ -69,6 +69,7 @@ async function getPosts() {
 
   if (result.status === "success") {
     // Call the function to display properties
+    console.log(result.data);
     displayProperties(result.data);
   } else {
     alertMessage(result.message, result.status);
