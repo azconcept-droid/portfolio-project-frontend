@@ -7,11 +7,12 @@
   <link rel="stylesheet" href="./css/profile.css">
   <link rel="stylesheet" href="./css/common.css">
   <script src="./js/logout.js" defer></script>
+  <script src="./js/profile.js" defer></script>
 </head>
 <body>
   <div class="dashboard">
     <div class="sidebar">
-      <div class="logo">Logo</div>
+      <div class="logo">clozagent</div>
       <nav>
         <ul>
           <li><a href="./dashboard.html">🏠  Home</a></li>
@@ -29,51 +30,75 @@
     </div>
     <div class="profile-container">
       <div class="profile-card">
-        <div class="profile-picture">
-          <img src="./img/OIP (3).jpg" alt="Profile Picture"/>
-          <input type="file" id="upload-picture" class="upload-btn">
+        <button class="save-btn"><a href="#profile-modal" class="edit">Edit</a></button>
+        <div class="display-info">
+          <img src="./img/babylaughing.jpeg" alt="Profile Picture"/>
+          <label for="img">Profile pics url: <span class="avatar"></span></label>
+          <p class="p-firstname">First name: <span class="firstName"></span></p>
+          <p class="p-lastname">Last name: <span class="lastName"></span></p>
+          <p>Email: <span class="email"></span></p>
+          <p>Phone number: <span class="phoneNumber"></span></p>
+          <p class="p-gender"> Gender: <span class="gender"></span></p>
+
+          <p>Bio: <span class="bio"></span></p>
+
+          <p>Occupation: <span class="occupation"></span></p>
+          <p class="p-experience">Years of experience: <span class="experience"></span></p>
+
+          <p>City: <span class="city"></span></p>
+          <p class="p-state">State: <span class="state"></span></p>
+          <p class="p-country">Country: <span class="country"></span></p>
         </div>
 
-        <form class="profile-form">
-          <label for="name"> First name </label>
-          <input type="text" id="firstName" placeholder="Enter your firstName" />
+        <div id="profile-modal" class="modal">
+          <div class="modal-content">
+            <a href="#" class="close">&times;</a>
+            <form class="profile-form">
+              <div class="profile-picture">
+                <img src="./img/babylaughing.jpeg" alt="Profile Picture"/>
+                <input type="file" id="upload-picture" class="upload-btn">
+              </div>
+              <label for="name"> First name </label>
+              <input type="text" id="firstName" placeholder="Enter your firstName" />
 
-          <label for="email"> Last name</label>
-          <input type="text" id="lastName" placeholder="Enter your lastName" />
+              <label for="email"> Last name</label>
+              <input type="text" id="lastName" placeholder="Enter your lastName" />
 
-          <label for="phone"> Phone number</label>
-          <input type="tel" id="phone" placeholder="Enter your phone number" />
+              <label for="phone"> Phone number</label>
+              <input type="tel" id="phone" placeholder="Enter your phone number" />
 
-          <label for="bio"> Bio</label>
-          <input type="text" id="bio" placeholder="Enter your bio">
+              <label for="bio"> Bio</label>
+              <input type="text" id="bio" placeholder="Enter your bio">
 
-          <label for="gender">Gender</label>
-          <select name="Gender" id="option">
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
-          </select>
+            <label for="gender">Gender</label>
+            <select name="Gender" id="option">
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
 
-          <label for="occupation"> Occupation</label>
-          <input type="text" id="occupation" placeholder="Enter your occupation">
+              <label for="occupation"> Occupation</label>
+              <input type="text" id="occupation" placeholder="Enter your occupation">
 
-          <label for="yearsOfExperience">Years Of Experience</label>
-          <input type="text" id="yearsOfExperience" placeholder="Years Of Experience">
-          
-          <label for="country">Country</label>
-          <input type="text" id="country" placeholder="Enter your country">
+              <label for="yearsOfExperience">Years Of Experience</label>
+              <input type="text" id="yearsOfExperience" placeholder="Years Of Experience">
+            
+              <label for="country">Country</label>
+              <input type="text" id="country" placeholder="Enter your country">
 
-          <label for="city">City</label>
-          <input type="text" id="city" placeholder="Enter your city">
+              <label for="city">City</label>
+              <input type="text" id="city" placeholder="Enter your city">
 
-          <label for="state">State</label>
-          <input type="text" id="state" placeholder="Enter your state">
+              <label for="state">State</label>
+              <input type="text" id="state" placeholder="Enter your state">
 
 
-          <div class="form-buttons">
-            <button type="submit" class="save-btn">Save Changes</button>
-            <button type="button" class="cancel-btn">Cancel</button>
+              <div class="form-buttons">
+                <button type="submit" class="save-btn">Save Changes</button>
+                <button type="button" class="cancel-btn">Cancel</button>
+              </div>
+            </form>
           </div>
-        </form>
+        </div>
       </div>
     </div>
   </div>

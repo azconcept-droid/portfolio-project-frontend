@@ -5,7 +5,7 @@ const postUrl = new URL('/api/v1/posts', baseUrl);
 
 const token = window.localStorage.getItem('access_token');
 
-async function getUserDashboard() {
+async function getUserDashboard(className) {
   const dashboardUrl = new URL(`/api/v1/user/dashboard`, baseUrl);
   let response = await fetch(dashboardUrl, {
     method: "GET",
@@ -18,8 +18,7 @@ async function getUserDashboard() {
   let result = await response.json();
 
   if (result.status === "success") {
-    console.log(result);
-    let message = document.querySelector('.welcome-message');
+    let message = document.querySelector(className);
     let email = document.querySelector('.user-email');
 
 
@@ -89,5 +88,5 @@ function alertMessage(message, status) {
   setTimeout(() => div.remove(), 5000);
 }
 
-getUserDashboard();
+getUserDashboard('.welcome-message');
 getPosts();
