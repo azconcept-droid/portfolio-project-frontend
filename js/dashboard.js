@@ -39,7 +39,7 @@ function displayProperties(properties) {
 
     card.innerHTML = `
       <div class="verified-tag">${property.isVerified ? "✔ Verified" : "Not verified"}</div>
-      <div class="${property.status}-tag">${property.status ? "✔ Available" : ""}</div>
+      <div class="${property.status}-tag">✔ ${property.status}</div>
       <img src="./img/OIP (3).jpg">
       <div class="card-content">
         <p class="property-type">Property: ${property.property}</p>

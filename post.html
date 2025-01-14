@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/post.css">
     <link rel="stylesheet" href="./css/common.css">
-
+    <script src="./js/logout.js" defer></script>
+    <script defer src="./js/post.js"></script>
     <title>Post Property</title>
 </head>
 <body>
@@ -14,25 +15,25 @@
             <div class="logo">clozagent</div>
             <nav>
                 <ul>
-                    <li><a href="./dashboard.html" class="active">Home</a></li>
-                    <li><a href="./profile.html">Profile</a></li>
-                    <li><a href="./Nofication.html" >Notification</a></li>
-                    <li><a href="#">Bookmarks</a></li> 
-                    <li><a href="." class="active">Post Property</a></li>
-                    <li><a href="#">Create Blog</a></li>
+                    <li><a href="./dashboard.html">🏠  Home</a></li>
+                    <li><a href="./profile.html">👤  Profile</a></li>
+                    <li><a href="./Nofication.html" >💌  Notifications</a></li>
+                    <li><a href="." class="active">🏣 Post Property</a></li>
+                    <li><a href="#">My Blogs</a></li>
+                    <li><a href="#">📔 Bookmarks</a></li> 
                 </ul> 
             </nav>
             <div class="sidebar-footer">
-                <a href="./seting.html">Settings</a>   
-                <a href="#">Logout</a>
+                <a href="./setting.html">⚙️  Settings</a>   
+                <a id="logout-button"> logout</a>
             </div>
         </div>
         <div class="post-container">
             <div class="post-card">
                 <form class="post-form">
                     <div class="post-picture">
-                        <img src="./img/OIP (6) - Copy.jpg" alt="Property picture">
-                        <input type="file" id="upload-picture" class="upload-btn" placeholder="upload property image">
+                        <!-- <img src="./img/OIP (6) - Copy.jpg" alt="Property picture"> -->
+                        <!-- <input type="file" id="upload-picture" class="upload-btn" placeholder="upload property image"> -->
                     </div>
                     <label for="name">Property</label>
                     <input type="text" id="name" placeholder="Enter your Property">
@@ -49,13 +50,13 @@
                     <label for="country">Country</label>
                     <input type="text" id="country" placeholder="Enter your country">
 
-                    <label for="videoUrl">VideoLink</label>
+                    <label for="videoUrl">Video link</label>
                     <input type="text" id="videoUrl" placeholder="Enter your videoUrl">
                     
-                    <div class="form-buttons">
-                        <button type="submit" class="post-btn">Post property</button>
-                        <button type="button" class="cancel-btn">Cancel</button>
-                    </div>
+                    <!-- <div class="form-buttons"> -->
+                    <button type="submit" class="post-btn">Post property</button>
+                    <!-- <button type="button" class="cancel-btn">Cancel</button> -->
+                    <!-- </div> -->
                 </form>
             </div>
         </div>

@@ -45,4 +45,23 @@ async function getUserProfile() {
   }
 }
 
+// Get references to the modal and close button
+const modal = document.querySelector('.modal');
+const closeModal = document.getElementById('closeModal');
+
+// Function to close the modal
+const hideModal = () => {
+  modal.classList.add('hidden');
+};
+
+// Attach event listener to the close button
+closeModal.addEventListener('click', hideModal);
+
+// Optional: Close modal when clicking outside of it
+window.addEventListener('click', (event) => {
+  if (event.target === modal) {
+    hideModal();
+  }
+});
+
 getUserProfile();
