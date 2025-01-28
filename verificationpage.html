@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/verificationpage.css">
-  <script src="./script.js" defer ></script>
+  <script src="./js/verify-email.js" defer ></script>
+  <script src="./js/resend-code.js" defer></script>
   <title>verify email</title>
 </head>
 <body>
@@ -16,22 +17,17 @@
     <div class="subheading">
       Please enter the code sent to your email to continue creating your account.
     </div>
-    <form>
-      <div class="form-group">
-        <!-- <label for="email">Email Address</label> -->
-        <!-- <input type="email" id="email" placeholder="Enter your email" required> -->
-      </div>
+    <form id="verify-form">
       <div class="form-group">
         <label for="verification-code"> <span>Verification Code</span></label>
         <div class="verification">
           <input type="text" id="verification-code" placeholder="Enter the code" required>
-          <button type="submit" class="get-btn">Get Code</button>
         </div>
       </div>
       <button type="submit" class="btn">Continue</button>
     </form>
     <div class="footer">
-      <p>Didn't get the code?  | <a href="#">Contact Support</a></p>
+      <p>Didn't get the code? <button type="submit" class="resend-btn">Resend Code</button></p>
     </div>
   </div>
 </body>

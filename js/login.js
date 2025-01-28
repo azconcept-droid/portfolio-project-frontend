@@ -1,8 +1,12 @@
 const baseUrl = new URL("http://localhost:4000");
 // const baseUrl = new URL("https://portfolio-project-backend-fqo9.onrender.com/api/v1")
 // 
+console.log("inside login js")
+
 document.getElementById("login-form").addEventListener("submit", async function (event) {
   event.preventDefault(); // Prevent form submission
+
+    console.log("inside login js")
 
   // Get form values
   const email = document.getElementById("email").value;
@@ -28,8 +32,13 @@ document.getElementById("login-form").addEventListener("submit", async function 
   window.localStorage.setItem('access_token', result.token);
 
   if (result.status === "success") {
+    console.log(result.status)
     alertMessage(result.message, result.status)
-    window.location.href = "../portfolio-project-frontend/dashboard.html";
+    if (email === "admin@example.com") { 
+      window.location.href = "../portfolio-project-frontend/admin-dashboard.html"
+    } else {
+      window.location.href = "../portfolio-project-frontend/dashboard.html";
+    }
   } else {
     alertMessage(result.message, result.status)
   }
