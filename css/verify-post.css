@@ -117,6 +117,7 @@ header h1 {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: scroll;
 }
 
 .posts h2 {
@@ -135,6 +136,7 @@ header h1 {
   border-radius: 8px;
   padding: 15px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
 .post-card .post-header {
@@ -195,6 +197,39 @@ header h1 {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transform: scale(1.02);
 }
+
+button {
+    padding: 8px 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+  
+  button:active {
+    transform: scale(0.98);
+  }
+  
+  .approved {
+    background-color: #3b3ca4;
+    color: white;
+    margin-right: 5px;
+  }
+  
+  .approved:hover {
+    background-color: #169c1c;
+  }
+  
+  .rejected {
+    background-color: #d9534f;
+    color: white;
+    margin-left: 5px;
+  }
+  
+  .rejected:hover {
+    background-color: #c9302c;
+  }
 
 .modal {
   display: none;

@@ -5,7 +5,7 @@ const postUrl = new URL('/api/v1/posts', baseUrl);
 
 const token = window.localStorage.getItem('access_token');
 
-function displayPosts(posts) {
+async function displayPosts(posts) {
   const postList = document.getElementById("post-list");
   postList.innerHTML = ""; // Clear existing content
 
@@ -13,29 +13,62 @@ function displayPosts(posts) {
     const card = document.createElement("div");
     card.classList.add("post-card");
 
-    card.innerHTML = `
-      <a href="#postModal1" class="post-link">
-        <div class="post-header">
-          <p><strong>${property.user.firstName}</strong></p>
-          <p><small>Posted on ${property.createdAt.split("T")[0]}</small></p>
-        </div>
-        <div class="post-content">
-          <p class="property-type">Property: ${property.property}</p>
-          <p class="price">Price: &#8358;${property.price}</p>
-          <p class="address">Address: ${property.city}, ${property.state}, ${property.country}</p>
-          <button><a href=${property.videoUrl} target="_blank" class="watch_video">Watch Video</a></button>
-        </div>
-      </a>
-      <div class="post-footer">
-        <label>
-          <input type="radio" name="post1" class="approve-checkbox"> Approve
-        </label>
-        <label>
-          <input type="radio" name="post1" class="reject-checkbox"> Reject
-        </label>
-        <button type="submit" class="verify-btn">submit</button>
-      </div>
-    `;
+    const postLink = document.createElement("a");
+    postLink.href = "#postModal1";
+    postLink.classList.add("post-link");
+
+    const postLinkHeader = document.createElement("div");
+    postLinkHeader.classList.add("post-header");
+
+    const postLinkHeaderPara1 = document.createElement("p");
+    postLinkHeaderPara1.innerHTML = `<strong>${property.user.firstName} ${property.user.lastName}</strong>`
+
+    const postLinkHeaderPara2 = document.createElement("p");
+    postLinkHeaderPara2.innerHTML = `<small>Posted on ${property.createdAt.split("T")[0]}</small>`
+    
+    postLinkHeader.appendChild(postLinkHeaderPara1);
+    postLinkHeader.appendChild(postLinkHeaderPara2);
+
+    const postContentDiv = document.createElement("div");
+    postContentDiv.classList.add("post-content");
+
+    const postContentDivPara1 = document.createElement("p");
+    postContentDivPara1.classList.add("property-type")
+    postContentDivPara1.innerHTML = `Property: ${property.property}`;
+
+    const postContentDivPara2 = document.createElement("p");
+    postContentDivPara2.classList.add("price")
+    postContentDivPara2.innerHTML = `Price: &#8358;${property.price}`;
+
+    const postContentDivPara3 = document.createElement("p");
+    postContentDivPara3.classList.add("address")
+    postContentDivPara3.innerHTML = `Address: ${property.city}, ${property.state}, ${property.country}`;
+
+    postContentDiv.appendChild(postContentDivPara1)
+    postContentDiv.appendChild(postContentDivPara2)
+    postContentDiv.appendChild(postContentDivPara3)
+
+    postLink.appendChild(postLinkHeader)
+    postLink.appendChild(postContentDiv)
+
+    const postFooter = document.createElement("div");
+    postFooter.classList.add("post-footer");
+
+    const approveBtn = document.createElement("button");
+    approveBtn.classList.add("approved")
+    approveBtn.textContent = "Approve";
+    approveBtn.addEventListener("click", () => updateStatus(property.id, "approved"));
+
+    const rejectBtn = document.createElement("button");
+    rejectBtn.classList.add("rejected")
+    rejectBtn.textContent = "Reject";
+    rejectBtn.addEventListener("click", () => updateStatus(property.id, "rejected"));
+
+    postFooter.appendChild(approveBtn)
+    postFooter.appendChild(rejectBtn)
+
+    card.appendChild(postLink);
+    card.appendChild(postFooter);
 
     postList.appendChild(card);
   });
@@ -53,11 +86,41 @@ async function getPosts() {
   let result = await response.json();
 
   if (result.status === "success") {
-    // Call the function to display properties
-    console.log(result.data);
+    // Call the function to display posts
     displayPosts(result.data);
   } else { 
     alertMessage(result.message, result.status);
+  }
+}
+
+// Function to update post status
+async function updateStatus(postId, status) {
+  let isVerified = (status === "approved") ? true : false;
+
+  console.log(postId, status)
+
+  const payload = {
+    id: postId,
+    isVerified,
+  }
+
+  const approveUrl = new URL('/api/v1/posts/approved', baseUrl);
+
+  let response = await fetch(approveUrl, {
+    method: "POST",
+    headers: {
+      'Content-Type': 'application/json',
+      'authorization': `Bearer ${token}`
+    },
+    body: JSON.stringify(payload)
+  })
+
+  let result = await response.json();
+
+  if (result.status === "success") {
+    alertMessage(result.message, result.status)
+  } else {
+    alertMessage(result.message, result.status)
   }
 }
 

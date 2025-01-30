@@ -1,12 +1,9 @@
 const baseUrl = new URL("http://localhost:4000");
 // const baseUrl = new URL("https://portfolio-project-backend-fqo9.onrender.com/api/v1")
-// 
-console.log("inside login js")
+
 
 document.getElementById("login-form").addEventListener("submit", async function (event) {
   event.preventDefault(); // Prevent form submission
-
-    console.log("inside login js")
 
   // Get form values
   const email = document.getElementById("email").value;

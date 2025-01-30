@@ -1,6 +1,5 @@
 const token = window.localStorage.getItem('access_token');
 
-async function getUserProfile() {
   const dashboardUrl = new URL(`/api/v1/user/dashboard`, baseUrl);
   let response = await fetch(dashboardUrl, {
     method: "GET",
@@ -11,6 +10,7 @@ async function getUserProfile() {
   });
 
   let result = await response.json();
+async function getUserProfile() {
 
   if (result.status === "success") {
     let avatar = document.querySelector('.avatar');
@@ -36,7 +36,6 @@ async function getUserProfile() {
     occupation.textContent = result.data.occupation;
     yearsOfExperience.textContent = result.data.yearsOfExperience;
     city.textContent = result.data.city;
-    console.log(result.data.state)
     state.textContent = result.data.state;
     country.textContent = result.data.country;
 
@@ -64,4 +63,56 @@ window.addEventListener('click', (event) => {
   }
 });
 
+async function updateUserProfile(id){
+  document.querySelector(".profile-form").addEventListener("submit", async function (event) {
+    event.preventDefault(); // Prevent form submission
+
+    // Get form values
+    const firstName = document.getElementById("firstName").value;
+    const lastName = document.getElementById("lastName").value;
+    const city = document.getElementById("city").value;
+    const state = document.getElementById("state").value;
+    const country = document.getElementById("country").value;
+    const phoneNumber = document.getElementById('phone').value;
+    let gender = document.getElementById('option').value;
+    let bio = document.getElementById('bio').value;
+    let occupation = document.getElementById('occupation').value;
+    let yearsOfExperience =document.querySelector('yearsOfExperience').value;
+
+    const payload = {
+      firstName,
+      lastName,
+      phoneNumber,
+      gender,
+      bio,
+      occupation,
+      yearsOfExperience,
+      price,
+      city,
+      state,
+      country,
+    }
+
+    const editUserUrl = new URL(`/api/v1/users/:${id}`, baseUrl);
+
+    let response = await fetch(editUserUrl, {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json',
+        'authorization': `Bearer ${token}`
+      },
+      body: JSON.stringify(payload)
+    })
+
+    let result = await response.json();
+
+    if (result.status === "success") {
+      alertMessage(result.message, result.status)
+    } else {
+      alertMessage(result.message, result.status)
+    }
+  });
+}
+
 getUserProfile();
+updateUserProfile(result.data.id)
